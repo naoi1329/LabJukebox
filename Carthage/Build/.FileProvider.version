@@ -1,0 +1,9 @@
+{
+  "commitish" : "0.24.0",
+  "Mac" : [
+    {
+      "hash" : "3f102f0911e0f252557f4c3876a0d8d18a98989c8c91164fcc905ed530ed38a4",
+      "name" : "FilesProvider"
+    }
+  ]
+}
