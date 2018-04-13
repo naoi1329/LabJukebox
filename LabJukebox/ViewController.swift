@@ -8,17 +8,34 @@
 
 import Cocoa
 import MediaPlayer
+import FilesProvider
 
 class ViewController: NSViewController {
 
     @IBOutlet weak var dragAndDropLabel: DragAndDropLabel!
     @IBOutlet weak var backgroundDragAndDropLabel: DragAndDropLabel!
     
+    @IBOutlet weak var sendButton: NSButton!
+    
+    @IBOutlet weak var cancelButton: NSButton!
+    
+    var musicInfo: MusicInfo!
+    var ftpFileProvider: FTPFileProvider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dragAndDropLabel.filePathDelegate = self
         backgroundDragAndDropLabel.filePathDelegate = self
+    
+        self.ftpFileProvider = FTPServerInfo.setProvider()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        self.sendButton.isHidden = false
+        self.cancelButton.isHidden = false
     }
 
     override var representedObject: Any? {
@@ -28,20 +45,43 @@ class ViewController: NSViewController {
     }
     
     func setMusicAfter() {
-        self.dragAndDropLabel.isHidden = true
-        self.backgroundDragAndDropLabel.isHidden = true
+    
+        self.sendButton.isHidden = false
+        self.cancelButton.isHidden = false
+        
+        self.dragAndDropLabel.stringValue = musicInfo.text()
     }
+    
+    @IBAction func sendButtonAction(_ sender: Any) {
+        //TODO: ProgressBar的なやつを出す別ウィンドウ？
+        guard let musicInfo = musicInfo else {
+            return
+        }
+        
+        FTPServerInfo().saveItem(path: musicInfo.path)
+    }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        
+        self.dragAndDropLabel.stringValue = "ドラッグ&ドロップ"
+        self.sendButton.isHidden = true
+        self.cancelButton.isHidden = true
+        
+        self.musicInfo = nil
+    }
+    
 }
 
 
 extension ViewController: FilePathDelegate {
-    func fileDragged(url: URL) {
-        print(url)
-        let fileName = url.lastPathComponent
+    func fileDragged(path: String) {
+        print(path)
+        let fileName = URL(fileURLWithPath: url).lastPathComponent
         if fileName.contains(".mp3") {
             do {
-                let musicInfo = MusicInfo.init(url: url)
+                musicInfo = MusicInfo.init(path: path)
                 print(musicInfo)
+                setMusicAfter()
             } catch {
                 // error ファイル読み込みに失敗しました.
                 let alert = NSAlert.init()

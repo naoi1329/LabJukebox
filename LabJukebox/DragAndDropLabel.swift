@@ -28,10 +28,9 @@ class DragAndDropLabel: NSTextField {
         super.init(frame: frameRect)
         print("override init(frame frameRect: NSRect)")
         self.registerForDraggedTypes([NSPasteboard.PasteboardType.fileURL, NSPasteboard.PasteboardType.URL])
-        
     }
     
-    override required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
         print("override required init?(coder: NSCoder)")
         self.registerForDraggedTypes([NSPasteboard.PasteboardType.fileURL])
@@ -53,10 +52,8 @@ class DragAndDropLabel: NSTextField {
         guard let path = pasteboard[0] as? String else {
             return false
         }
-        //GET YOUR FILE PATH !!!
-        print(path)
         
-        filePathDelegate?.fileDragged(url: URL(fileURLWithPath: path))
+        filePathDelegate?.fileDragged(path: path)
 //        filePathDelegate?.fileDragged(path: path)
         return true
     }

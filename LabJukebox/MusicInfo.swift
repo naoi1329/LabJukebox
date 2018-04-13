@@ -27,10 +27,12 @@ struct MusicInfo {
     var title: String = Date.nowAdd()
     var albumName: String = "情報不明"
     var artist: String = "情報不明"
-    var artwork : NSImage! = nil
+    var artwork: NSImage! = nil
+    var path: String! = nil
     
-    init(url: URL) {
-        let items = AVPlayerItem(url: url).asset.commonMetadata
+    init(path: String) {
+        self.path = path
+        let items = AVPlayerItem(url: URL(fileURLWithPath: path)).asset.commonMetadata
         
         for item in items {
             guard let commonKey = item.commonKey?.rawValue,
@@ -50,6 +52,13 @@ struct MusicInfo {
                 }
             }
         }
+    }
+    
+    func text() -> String {
+        return  """
+        \(self.title)
+        \(self.artist) - \(self.artist)
+        """
     }
     
 //    init(path: String) {
