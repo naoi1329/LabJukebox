@@ -10,8 +10,21 @@ import Foundation
 import Cocoa
 import MediaPlayer
 
+extension Date {
+    static func nowAdd() -> String {
+        let format: String = "M/d(E) HH:mm:ss"
+
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.dateFormat = format
+        
+        return formatter.string(from: Date())
+    }
+}
+
 struct MusicInfo {
-    var title: String = "情報不明"
+    var title: String = Date.nowAdd()
     var albumName: String = "情報不明"
     var artist: String = "情報不明"
     var artwork : NSImage! = nil
