@@ -322,7 +322,7 @@
 			files = (
 			);
 			inputPaths = (
-				Carthage/Build/iOS/FileProvider.framework,
+				"$(SRCROOT)/Carthage/Build/Mac/FilesProvider.framework",
 			);
 			outputPaths = (
 			);

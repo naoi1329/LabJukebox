@@ -16,8 +16,7 @@ enum DragAndDropResult {
 }
 
 protocol FilePathDelegate {
-    func fileDragged(url: URL)
-//    func fileDragged(path: String)
+    func fileDragged(path: String)
 }
 
 class DragAndDropLabel: NSTextField {

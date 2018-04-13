@@ -20,14 +20,17 @@ class ViewController: NSViewController {
     @IBOutlet weak var cancelButton: NSButton!
     
     var musicInfo: MusicInfo!
-    var ftpFileProvider: FTPFileProvider!
+    var ftpServer: FTPServerInfo = FTPServerInfo() {
+        didSet {
+            ftpServer.provider.delegate = self
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dragAndDropLabel.filePathDelegate = self
         backgroundDragAndDropLabel.filePathDelegate = self
-    
-        self.ftpFileProvider = FTPServerInfo.setProvider()
         // Do any additional setup after loading the view.
     }
     
@@ -74,9 +77,10 @@ class ViewController: NSViewController {
 
 
 extension ViewController: FilePathDelegate {
+    
     func fileDragged(path: String) {
         print(path)
-        let fileName = URL(fileURLWithPath: url).lastPathComponent
+        let fileName = URL(fileURLWithPath: path).lastPathComponent
         if fileName.contains(".mp3") {
             do {
                 musicInfo = MusicInfo.init(path: path)
@@ -121,4 +125,49 @@ extension ViewController: FilePathDelegate {
 //            alert.runModal()
 //        }
 //    }
+}
+
+
+extension ViewController: FileProviderDelegate {
+    func fileproviderFailed(_ fileProvider: FileProviderOperations, operation: FileOperationType, error: Error) {
+        switch operation {
+        case .copy(source: let source, destination: let dest):
+            print("copy of \(source) failed.")
+        case .remove:
+            print("file can't be deleted.")
+        default:
+            print("\(operation.actionDescription) from \(operation.source) to \(operation.destination) failed")
+        }
+    }
+    
+    func fileproviderSucceed(_ fileProvider: FileProviderOperations, operation: FileOperationType) {
+        switch operation {
+        case .copy(source: let source, destination: let dest):
+            print("\(source) copied to \(dest).")
+        case .remove(path: let path):
+            print("\(path) has been deleted.")
+        default:
+            print("\(operation.actionDescription) from \(operation.source) to \(operation.destination) succeed")
+        }
+    }
+    
+    func fileproviderFailed(_ fileProvider: FileProviderOperations, operation: FileOperationType) {
+        switch operation {
+        case .copy(source: let source, destination: let dest):
+            print("copy of \(source) failed.")
+        case .remove:
+            print("file can't be deleted.")
+        default:
+            print("\(operation.actionDescription) from \(operation.source) to \(operation.destination) failed")
+        }
+    }
+    
+    func fileproviderProgress(_ fileProvider: FileProviderOperations, operation: FileOperationType, progress: Float) {
+        switch operation {
+        case .copy(source: let source, destination: let dest):
+            print("Copy\(source) to \(dest): \(progress * 100) completed.")
+        default:
+            break
+        }
+    }
 }
