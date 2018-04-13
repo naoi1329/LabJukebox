@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		051963F12080567000CFA182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051963F02080567000CFA182 /* AppDelegate.swift */; };
+		051963F32080567000CFA182 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051963F22080567000CFA182 /* ViewController.swift */; };
+		051963F52080567200CFA182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 051963F42080567200CFA182 /* Assets.xcassets */; };
+		051963F82080567200CFA182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051963F62080567200CFA182 /* Main.storyboard */; };
+		051964042080567200CFA182 /* LabJukeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051964032080567200CFA182 /* LabJukeboxTests.swift */; };
+		0519640F2080567200CFA182 /* LabJukeboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0519640E2080567200CFA182 /* LabJukeboxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		051964002080567200CFA182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051963E52080567000CFA182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 051963EC2080567000CFA182;
+			remoteInfo = LabJukebox;
+		};
+		0519640B2080567200CFA182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051963E52080567000CFA182 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 051963EC2080567000CFA182;
+			remoteInfo = LabJukebox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		051963ED2080567000CFA182 /* LabJukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabJukebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		051963F02080567000CFA182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		051963F22080567000CFA182 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		051963F42080567200CFA182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		051963F72080567200CFA182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		051963F92080567200CFA182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		051963FA2080567200CFA182 /* LabJukebox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LabJukebox.entitlements; sourceTree = "<group>"; };
+		051963FF2080567200CFA182 /* LabJukeboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LabJukeboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		051964032080567200CFA182 /* LabJukeboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabJukeboxTests.swift; sourceTree = "<group>"; };
+		051964052080567200CFA182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0519640A2080567200CFA182 /* LabJukeboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LabJukeboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0519640E2080567200CFA182 /* LabJukeboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabJukeboxUITests.swift; sourceTree = "<group>"; };
+		051964102080567200CFA182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		051963EA2080567000CFA182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051963FC2080567200CFA182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051964072080567200CFA182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		051963E42080567000CFA182 = {
+			isa = PBXGroup;
+			children = (
+				051963EF2080567000CFA182 /* LabJukebox */,
+				051964022080567200CFA182 /* LabJukeboxTests */,
+				0519640D2080567200CFA182 /* LabJukeboxUITests */,
+				051963EE2080567000CFA182 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		051963EE2080567000CFA182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				051963ED2080567000CFA182 /* LabJukebox.app */,
+				051963FF2080567200CFA182 /* LabJukeboxTests.xctest */,
+				0519640A2080567200CFA182 /* LabJukeboxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		051963EF2080567000CFA182 /* LabJukebox */ = {
+			isa = PBXGroup;
+			children = (
+				051963F02080567000CFA182 /* AppDelegate.swift */,
+				051963F22080567000CFA182 /* ViewController.swift */,
+				051963F42080567200CFA182 /* Assets.xcassets */,
+				051963F62080567200CFA182 /* Main.storyboard */,
+				051963F92080567200CFA182 /* Info.plist */,
+				051963FA2080567200CFA182 /* LabJukebox.entitlements */,
+			);
+			path = LabJukebox;
+			sourceTree = "<group>";
+		};
+		051964022080567200CFA182 /* LabJukeboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				051964032080567200CFA182 /* LabJukeboxTests.swift */,
+				051964052080567200CFA182 /* Info.plist */,
+			);
+			path = LabJukeboxTests;
+			sourceTree = "<group>";
+		};
+		0519640D2080567200CFA182 /* LabJukeboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0519640E2080567200CFA182 /* LabJukeboxUITests.swift */,
+				051964102080567200CFA182 /* Info.plist */,
+			);
+			path = LabJukeboxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		051963EC2080567000CFA182 /* LabJukebox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051964132080567200CFA182 /* Build configuration list for PBXNativeTarget "LabJukebox" */;
+			buildPhases = (
+				051963E92080567000CFA182 /* Sources */,
+				051963EA2080567000CFA182 /* Frameworks */,
+				051963EB2080567000CFA182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LabJukebox;
+			productName = LabJukebox;
+			productReference = 051963ED2080567000CFA182 /* LabJukebox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		051963FE2080567200CFA182 /* LabJukeboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051964162080567200CFA182 /* Build configuration list for PBXNativeTarget "LabJukeboxTests" */;
+			buildPhases = (
+				051963FB2080567200CFA182 /* Sources */,
+				051963FC2080567200CFA182 /* Frameworks */,
+				051963FD2080567200CFA182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				051964012080567200CFA182 /* PBXTargetDependency */,
+			);
+			name = LabJukeboxTests;
+			productName = LabJukeboxTests;
+			productReference = 051963FF2080567200CFA182 /* LabJukeboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		051964092080567200CFA182 /* LabJukeboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051964192080567200CFA182 /* Build configuration list for PBXNativeTarget "LabJukeboxUITests" */;
+			buildPhases = (
+				051964062080567200CFA182 /* Sources */,
+				051964072080567200CFA182 /* Frameworks */,
+				051964082080567200CFA182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0519640C2080567200CFA182 /* PBXTargetDependency */,
+			);
+			name = LabJukeboxUITests;
+			productName = LabJukeboxUITests;
+			productReference = 0519640A2080567200CFA182 /* LabJukeboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		051963E52080567000CFA182 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "直井翔汰";
+				TargetAttributes = {
+					051963EC2080567000CFA182 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					051963FE2080567200CFA182 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 051963EC2080567000CFA182;
+					};
+					051964092080567200CFA182 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 051963EC2080567000CFA182;
+					};
+				};
+			};
+			buildConfigurationList = 051963E82080567000CFA182 /* Build configuration list for PBXProject "LabJukebox" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 051963E42080567000CFA182;
+			productRefGroup = 051963EE2080567000CFA182 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				051963EC2080567000CFA182 /* LabJukebox */,
+				051963FE2080567200CFA182 /* LabJukeboxTests */,
+				051964092080567200CFA182 /* LabJukeboxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		051963EB2080567000CFA182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051963F52080567200CFA182 /* Assets.xcassets in Resources */,
+				051963F82080567200CFA182 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051963FD2080567200CFA182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051964082080567200CFA182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		051963E92080567000CFA182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051963F32080567000CFA182 /* ViewController.swift in Sources */,
+				051963F12080567000CFA182 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051963FB2080567200CFA182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051964042080567200CFA182 /* LabJukeboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051964062080567200CFA182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0519640F2080567200CFA182 /* LabJukeboxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		051964012080567200CFA182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 051963EC2080567000CFA182 /* LabJukebox */;
+			targetProxy = 051964002080567200CFA182 /* PBXContainerItemProxy */;
+		};
+		0519640C2080567200CFA182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 051963EC2080567000CFA182 /* LabJukebox */;
+			targetProxy = 0519640B2080567200CFA182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		051963F62080567200CFA182 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				051963F72080567200CFA182 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		051964112080567200CFA182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		051964122080567200CFA182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		051964142080567200CFA182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LabJukebox/LabJukebox.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJYY9X256;
+				INFOPLIST_FILE = LabJukebox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukebox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		051964152080567200CFA182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LabJukebox/LabJukebox.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJYY9X256;
+				INFOPLIST_FILE = LabJukebox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukebox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		051964172080567200CFA182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJYY9X256;
+				INFOPLIST_FILE = LabJukeboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabJukebox.app/Contents/MacOS/LabJukebox";
+			};
+			name = Debug;
+		};
+		051964182080567200CFA182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJYY9X256;
+				INFOPLIST_FILE = LabJukeboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabJukebox.app/Contents/MacOS/LabJukebox";
+			};
+			name = Release;
+		};
+		0519641A2080567200CFA182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJYY9X256;
+				INFOPLIST_FILE = LabJukeboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = LabJukebox;
+			};
+			name = Debug;
+		};
+		0519641B2080567200CFA182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5YJYY9X256;
+				INFOPLIST_FILE = LabJukeboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = LabJukebox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		051963E82080567000CFA182 /* Build configuration list for PBXProject "LabJukebox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051964112080567200CFA182 /* Debug */,
+				051964122080567200CFA182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		051964132080567200CFA182 /* Build configuration list for PBXNativeTarget "LabJukebox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051964142080567200CFA182 /* Debug */,
+				051964152080567200CFA182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		051964162080567200CFA182 /* Build configuration list for PBXNativeTarget "LabJukeboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051964172080567200CFA182 /* Debug */,
+				051964182080567200CFA182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		051964192080567200CFA182 /* Build configuration list for PBXNativeTarget "LabJukeboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0519641A2080567200CFA182 /* Debug */,
+				0519641B2080567200CFA182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 051963E52080567000CFA182 /* Project object */;
+}
