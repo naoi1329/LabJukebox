@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="LabJukebox" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,7 +689,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
+                        <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
@@ -703,15 +704,51 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="LabJukebox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vCT-89-ulo">
+                                <rect key="frame" x="118" y="117" width="244" height="29"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ドラッグ&amp;ドロップ" id="OyU-G7-Dp0">
+                                    <font key="font" size="27" name="AppleBraille-Outline6Dot"/>
+                                    <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="khd-Mc-gm9" customClass="DragAndDropLabel" customModule="LabJukebox" customModuleProvider="target">
+                                <rect key="frame" x="-2" y="0.0" width="484" height="262"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="480" id="QZu-yR-Pei"/>
+                                    <constraint firstAttribute="height" constant="262" id="sd9-Cn-Pcp"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="HNV-pH-PYd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="khd-Mc-gm9" secondAttribute="bottom" id="HI4-ka-QFI"/>
+                            <constraint firstItem="khd-Mc-gm9" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="PbG-MU-dAH"/>
+                            <constraint firstAttribute="trailing" secondItem="khd-Mc-gm9" secondAttribute="trailing" id="Pgp-Ex-Tcj"/>
+                            <constraint firstItem="khd-Mc-gm9" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Xul-Kv-Ds0"/>
+                            <constraint firstItem="khd-Mc-gm9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gfc-6x-S9b"/>
+                            <constraint firstItem="vCT-89-ulo" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="lmw-B7-iye"/>
+                            <constraint firstItem="vCT-89-ulo" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="o6E-8u-lVr"/>
+                            <constraint firstItem="khd-Mc-gm9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="rbv-Uo-uKD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundDragAndDropLabel" destination="khd-Mc-gm9" id="OJf-FJ-7mf"/>
+                        <outlet property="dragAndDropLabel" destination="khd-Mc-gm9" id="xFJ-R5-g7V"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="854"/>
         </scene>
     </scenes>
 </document>
