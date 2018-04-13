@@ -9,6 +9,7 @@
 import Cocoa
 import MediaPlayer
 import FilesProvider
+import ProgressKit
 
 class ViewController: NSViewController {
 
@@ -31,7 +32,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         dragAndDropLabel.filePathDelegate = self
         backgroundDragAndDropLabel.filePathDelegate = self
-        // Do any additional setup after loading the view.
+    
     }
     
     override func viewDidAppear() {

@@ -60,33 +60,4 @@ struct MusicInfo {
         \(self.artist) - \(self.artist)
         """
     }
-    
-//    init(path: String) {
-//        let mp3 = try? MP3File(path: path)
-//        print(mp3?.getAlbum())
-//        print(mp3?.getArtist())
-//        print(mp3?.getTitle())
-//        print(mp3?.getLyrics())
-//        print(mp3?.getArtwork())
-//        let items = AVPlayerItem(url: URL(fileURLWithPath: path)).asset.commonMetadata
-//        
-//        for item in items {
-//            guard let commonKey = item.commonKey?.rawValue,
-//                let stringValue = item.stringValue else {
-//                    continue
-//            }
-//            
-//            if commonKey == "title" {
-//                self.title = stringValue
-//            } else if commonKey == "albumName" {
-//                self.albumName = stringValue
-//            } else if commonKey == "artist" {
-//                self.artist = stringValue
-//            } else if commonKey == "artwork" {
-//                if let data = item.dataValue {
-//                    self.artwork = NSImage(data: data)
-//                }
-//            }
-//        }
-//    }
 }
