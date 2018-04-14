@@ -24,6 +24,10 @@
 		0519645220809C0400CFA182 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0519645120809C0400CFA182 /* AppKit.framework */; };
 		051964552080C57500CFA182 /* FilesProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051964542080C57500CFA182 /* FilesProvider.framework */; };
 		051964592080C68600CFA182 /* FTPServerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051964582080C68600CFA182 /* FTPServerInfo.swift */; };
+		05E5E1FC208268C700814467 /* BeforeDragAndDropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E5E1FB208268C700814467 /* BeforeDragAndDropView.xib */; };
+		05E5E1FE2082696300814467 /* BeforeDragAndDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5E1FD2082696300814467 /* BeforeDragAndDropView.swift */; };
+		05E5E200208269B200814467 /* AfterDragAndDropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E5E1FF208269B200814467 /* AfterDragAndDropView.xib */; };
+		05E5E20220826A1200814467 /* AfterDragAndDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5E20120826A1200814467 /* AfterDragAndDropView.swift */; };
 		7BE3000F4F9B13E447F18697 /* Pods_LabJukeboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D529E6D76DEA88DF2D1197F6 /* Pods_LabJukeboxUITests.framework */; };
 		9C5713ACC9C1FA9B637497CF /* Pods_LabJukeboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD3E742A4922EE896F162BF /* Pods_LabJukeboxTests.framework */; };
 		C35193A1C8A09898AE18A2AE /* Pods_LabJukebox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD06FB78966620C647B0212 /* Pods_LabJukebox.framework */; };
@@ -84,6 +88,10 @@
 		0519645120809C0400CFA182 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		051964542080C57500CFA182 /* FilesProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FilesProvider.framework; path = Carthage/Build/Mac/FilesProvider.framework; sourceTree = "<group>"; };
 		051964582080C68600CFA182 /* FTPServerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPServerInfo.swift; sourceTree = "<group>"; };
+		05E5E1FB208268C700814467 /* BeforeDragAndDropView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforeDragAndDropView.xib; sourceTree = "<group>"; };
+		05E5E1FD2082696300814467 /* BeforeDragAndDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeDragAndDropView.swift; sourceTree = "<group>"; };
+		05E5E1FF208269B200814467 /* AfterDragAndDropView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterDragAndDropView.xib; sourceTree = "<group>"; };
+		05E5E20120826A1200814467 /* AfterDragAndDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterDragAndDropView.swift; sourceTree = "<group>"; };
 		10BE35DD8A1650422137971A /* Pods-LabJukebox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabJukebox.release.xcconfig"; path = "Pods/Target Support Files/Pods-LabJukebox/Pods-LabJukebox.release.xcconfig"; sourceTree = "<group>"; };
 		3A8411B875B452BA727980AB /* Pods-LabJukeboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabJukeboxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LabJukeboxTests/Pods-LabJukeboxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56498F8B98CC5028578A03A0 /* Pods-LabJukeboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LabJukeboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LabJukeboxUITests/Pods-LabJukeboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +164,10 @@
 				0519641C2080568500CFA182 /* DragAndDropLabel.swift */,
 				0519641E2080917E00CFA182 /* MusicInfo.swift */,
 				051964582080C68600CFA182 /* FTPServerInfo.swift */,
+				05E5E1FB208268C700814467 /* BeforeDragAndDropView.xib */,
+				05E5E1FD2082696300814467 /* BeforeDragAndDropView.swift */,
+				05E5E1FF208269B200814467 /* AfterDragAndDropView.xib */,
+				05E5E20120826A1200814467 /* AfterDragAndDropView.swift */,
 				051963F42080567200CFA182 /* Assets.xcassets */,
 				051963F62080567200CFA182 /* Main.storyboard */,
 				051963F92080567200CFA182 /* Info.plist */,
@@ -335,8 +347,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E5E200208269B200814467 /* AfterDragAndDropView.xib in Resources */,
 				051963F52080567200CFA182 /* Assets.xcassets in Resources */,
 				051963F82080567200CFA182 /* Main.storyboard in Resources */,
+				05E5E1FC208268C700814467 /* BeforeDragAndDropView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,12 +539,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E5E20220826A1200814467 /* AfterDragAndDropView.swift in Sources */,
 				051963F32080567000CFA182 /* ViewController.swift in Sources */,
 				0519644E20809B3900CFA182 /* Errors.swift in Sources */,
 				0519641D2080568500CFA182 /* DragAndDropLabel.swift in Sources */,
 				0519644F20809B3C00CFA182 /* ID3Tag.swift in Sources */,
 				051963F12080567000CFA182 /* AppDelegate.swift in Sources */,
 				0519644D20809B3700CFA182 /* Toolbox.swift in Sources */,
+				05E5E1FE2082696300814467 /* BeforeDragAndDropView.swift in Sources */,
 				0519644C20809B3400CFA182 /* TagParser.swift in Sources */,
 				0519644B20809B3200CFA182 /* NSImage+WriteToFile.swift in Sources */,
 				0519644A20809B3000CFA182 /* MP3File.swift in Sources */,
@@ -711,7 +727,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = LabJukebox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukebox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -734,7 +753,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = LabJukebox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukebox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -751,7 +773,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5YJYY9X256;
 				INFOPLIST_FILE = LabJukeboxTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -769,7 +795,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5YJYY9X256;
 				INFOPLIST_FILE = LabJukeboxTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -786,7 +816,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5YJYY9X256;
 				INFOPLIST_FILE = LabJukeboxUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -803,7 +837,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5YJYY9X256;
 				INFOPLIST_FILE = LabJukeboxUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = naoi.LabJukeboxUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

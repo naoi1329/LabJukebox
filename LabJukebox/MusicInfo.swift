@@ -24,11 +24,11 @@ extension Date {
 }
 
 struct MusicInfo {
-    var title: String = Date.nowAdd()
-    var albumName: String = "情報不明"
-    var artist: String = "情報不明"
-    var artwork: NSImage! = nil
-    var path: String! = nil
+    private var title: String? = nil
+    private var albumName: String = "情報不明"
+    private var artist: String = "情報不明"
+    private(set) var artwork: NSImage! = nil
+    private var path: String! = nil
     
     init(path: String) {
         self.path = path
@@ -52,12 +52,18 @@ struct MusicInfo {
                 }
             }
         }
+        
+        if title == nil {
+            //mp3ファイルに情報がなかった場合、ファイル名を曲名にする
+            self.title = path.components(separatedBy: "/").last
+        }
     }
     
-    func text() -> String {
-        return  """
-        \(self.title)
-        \(self.artist) - \(self.artist)
-        """
+    func titleText() -> String {
+        return "\(self.title!)" //force unwrappingする　ファイル名は絶対入るため
+    }
+    
+    func artistAndAlbumText() -> String {
+        return  "\(self.artist) - \(self.albumName)"
     }
 }

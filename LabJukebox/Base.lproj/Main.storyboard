@@ -2,9 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -711,98 +709,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="khd-Mc-gm9" customClass="DragAndDropLabel" customModule="LabJukebox" customModuleProvider="target">
-                                <rect key="frame" x="-2" y="0.0" width="484" height="262"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="480" id="QZu-yR-Pei"/>
-                                    <constraint firstAttribute="height" constant="262" id="sd9-Cn-Pcp"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="HNV-pH-PYd">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Tv-Z2-kid">
-                                <rect key="frame" x="96" y="53" width="288" height="157"/>
-                                <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-bg-Py8" customClass="DragAndDropLabel" customModule="LabJukebox" customModuleProvider="target">
-                                        <rect key="frame" x="-2" y="0.0" width="292" height="157"/>
-                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="ドラッグ&amp;ドロップ" id="yww-jG-kwc">
-                                            <font key="font" metaFont="system" size="21"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <stackView hidden="YES" distribution="fillEqually" orientation="horizontal" alignment="top" spacing="30" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulr-On-C8g">
-                                        <rect key="frame" x="0.0" y="136" width="288" height="21"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5jS-fy-21O">
-                                                <rect key="frame" x="-6" y="-7" width="141" height="32"/>
-                                                <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WMQ-ac-RRq">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" usesAppearanceFont="YES"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="cancelButtonAction:" target="XfG-lQ-9wD" id="zpj-nJ-Z6t"/>
-                                                </connections>
-                                            </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uJS-yK-XnY">
-                                                <rect key="frame" x="153" y="-7" width="141" height="32"/>
-                                                <buttonCell key="cell" type="push" title="送信" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cRg-k3-Esi">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="sendButtonAction:" target="XfG-lQ-9wD" id="e02-BS-Z2A"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="5jS-fy-21O" firstAttribute="top" secondItem="ulr-On-C8g" secondAttribute="top" id="UuF-7j-hWG"/>
-                                        </constraints>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ulr-On-C8g" firstAttribute="width" secondItem="0Tv-Z2-kid" secondAttribute="width" id="13b-zT-blH"/>
-                                    <constraint firstItem="fdL-bg-Py8" firstAttribute="width" secondItem="0Tv-Z2-kid" secondAttribute="width" id="L2M-NE-wYd"/>
-                                </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-g4-gYA" customClass="BeforeDragAndDropView" customModule="LabJukebox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="DCx-NX-anr" customClass="AfterDragAndDropView" customModule="LabJukebox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="khd-Mc-gm9" secondAttribute="bottom" id="HI4-ka-QFI"/>
-                            <constraint firstItem="khd-Mc-gm9" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="PbG-MU-dAH"/>
-                            <constraint firstAttribute="trailing" secondItem="khd-Mc-gm9" secondAttribute="trailing" id="Pgp-Ex-Tcj"/>
-                            <constraint firstItem="0Tv-Z2-kid" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="SST-zz-ASI"/>
-                            <constraint firstItem="khd-Mc-gm9" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Xul-Kv-Ds0"/>
-                            <constraint firstItem="khd-Mc-gm9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gfc-6x-S9b"/>
-                            <constraint firstItem="0Tv-Z2-kid" firstAttribute="width" secondItem="khd-Mc-gm9" secondAttribute="width" multiplier="3:5" id="hti-gG-QtS"/>
-                            <constraint firstItem="0Tv-Z2-kid" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="qUf-9v-ToN"/>
-                            <constraint firstItem="0Tv-Z2-kid" firstAttribute="height" secondItem="khd-Mc-gm9" secondAttribute="height" multiplier="3:5" id="rJ1-p4-Hs4"/>
-                            <constraint firstItem="khd-Mc-gm9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="rbv-Uo-uKD"/>
+                            <constraint firstAttribute="bottom" secondItem="DCx-NX-anr" secondAttribute="bottom" id="487-am-yzo"/>
+                            <constraint firstAttribute="trailing" secondItem="DCx-NX-anr" secondAttribute="trailing" id="Dqf-lg-Btl"/>
+                            <constraint firstItem="DCx-NX-anr" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="cn9-Ee-bEH"/>
+                            <constraint firstItem="DCx-NX-anr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ghA-mM-B0z"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundDragAndDropLabel" destination="khd-Mc-gm9" id="OJf-FJ-7mf"/>
-                        <outlet property="cancelButton" destination="5jS-fy-21O" id="yPP-Vz-FmL"/>
-                        <outlet property="dragAndDropLabel" destination="fdL-bg-Py8" id="LBn-9U-mjw"/>
-                        <outlet property="sendButton" destination="uJS-yK-XnY" id="nJC-OS-SaF"/>
+                        <outlet property="afterDragAndDropView" destination="DCx-NX-anr" id="zIN-e9-XWN"/>
+                        <outlet property="beforeDragAndDropView" destination="ygg-g4-gYA" id="GHC-s8-vCV"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

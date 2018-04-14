@@ -12,13 +12,9 @@ import FilesProvider
 import ProgressKit
 
 class ViewController: NSViewController {
-
-    @IBOutlet weak var dragAndDropLabel: DragAndDropLabel!
-    @IBOutlet weak var backgroundDragAndDropLabel: DragAndDropLabel!
     
-    @IBOutlet weak var sendButton: NSButton!
-    
-    @IBOutlet weak var cancelButton: NSButton!
+    @IBOutlet weak var afterDragAndDropView: AfterDragAndDropView!
+    @IBOutlet weak var beforeDragAndDropView: BeforeDragAndDropView!
     
     var musicInfo: MusicInfo!
     var ftpServer: FTPServerInfo = FTPServerInfo() {
@@ -30,16 +26,12 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dragAndDropLabel.filePathDelegate = self
-        backgroundDragAndDropLabel.filePathDelegate = self
-    
-    }
-    
-    override func viewDidAppear() {
-        super.viewDidAppear()
         
-        self.sendButton.isHidden = false
-        self.cancelButton.isHidden = false
+        self.afterDragAndDropView.isHidden = true
+        afterDragAndDropView.delegate = self
+        afterDragAndDropView.filePathDelegate = self
+        
+        beforeDragAndDropView.filePathDelegate = self
     }
 
     override var representedObject: Any? {
@@ -49,29 +41,7 @@ class ViewController: NSViewController {
     }
     
     func setMusicAfter() {
-    
-        self.sendButton.isHidden = false
-        self.cancelButton.isHidden = false
-        
-        self.dragAndDropLabel.stringValue = musicInfo.text()
-    }
-    
-    @IBAction func sendButtonAction(_ sender: Any) {
-        //TODO: ProgressBar的なやつを出す別ウィンドウ？
-        guard let musicInfo = musicInfo else {
-            return
-        }
-        
-        FTPServerInfo().saveItem(path: musicInfo.path)
-    }
-    
-    @IBAction func cancelButtonAction(_ sender: Any) {
-        
-        self.dragAndDropLabel.stringValue = "ドラッグ&ドロップ"
-        self.sendButton.isHidden = true
-        self.cancelButton.isHidden = true
-        
-        self.musicInfo = nil
+        //TODO: AfterDragAndDropViewを表示して,musicInfoの値を登録
     }
     
 }
@@ -80,7 +50,6 @@ class ViewController: NSViewController {
 extension ViewController: FilePathDelegate {
     
     func fileDragged(path: String) {
-        print(path)
         let fileName = URL(fileURLWithPath: path).lastPathComponent
         if fileName.contains(".mp3") {
             do {
@@ -103,29 +72,18 @@ extension ViewController: FilePathDelegate {
             alert.runModal()
         }
     }
+}
+
+extension ViewController: AfterDrogAndDropViewDelegate {
+    func cancel() {
+        //TODO: キャンセル処理 BeforeDragAndDropViewを表示して,musicInfoをnilへ
+        
+    }
     
-//    func fileDragged(path: String) {
-//        let fileName = URL(fileURLWithPath: path).lastPathComponent
-//        if path.contains(".mp3") {
-//            do {
-//                let musicInfo = MusicInfo.init(path: path)
-//                print(musicInfo)
-//            } catch {
-//                // error ファイル読み込みに失敗しました.
-//                let alert = NSAlert.init()
-//                alert.messageText = "ファイル読み込みに失敗しました。"
-//                alert.addButton(withTitle: "OK")
-//                alert.alertStyle = .warning
-//                alert.runModal()
-//            }
-//        } else {
-//            // error MP3じゃありません
-//            let alert = NSAlert.init()
-//            alert.messageText = "mp3ファイルでありません。"
-//            alert.alertStyle = .warning
-//            alert.runModal()
-//        }
-//    }
+    func send() {
+        //TODO: ファイル送信部分 musicInfoをもとにftpで送信する処理を書く
+        //      progress画面も出す
+    }
 }
 
 

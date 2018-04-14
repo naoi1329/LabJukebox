@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="AfterDragAndDropView" customModule="LabJukebox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="471" height="363"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vrj-4n-fC4">
+                    <rect key="frame" x="209" y="134" width="53" height="29"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="曲名" id="vca-Lc-Cz1">
+                        <font key="font" metaFont="system" size="24"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="73H-Zv-m23">
+                    <rect key="frame" x="135" y="94" width="201" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="アーティスト名 - アルバム名" id="7uq-At-2Ws">
+                        <font key="font" size="16" name=".HiraKakuInterface-W3"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wr3-5O-vGt">
+                    <rect key="frame" x="143" y="29" width="186" height="21"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4cd-rs-DVb">
+                            <rect key="frame" x="-6" y="-7" width="101" height="32"/>
+                            <buttonCell key="cell" type="push" title="キャンセル" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SXt-6K-Q6a">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" usesAppearanceFont="YES"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="cancelButton" target="c22-O7-iKe" id="XeB-B4-IlC"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ULy-Vd-Jja">
+                            <rect key="frame" x="91" y="-7" width="101" height="32"/>
+                            <buttonCell key="cell" type="push" title="送信" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ogi-PL-yMa">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" usesAppearanceFont="YES"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="sendButton" target="c22-O7-iKe" id="ZXh-mZ-eNm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yeC-Nc-fOE">
+                    <rect key="frame" x="156" y="187" width="160" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="XjA-5p-aOw"/>
+                        <constraint firstAttribute="height" constant="160" id="aXP-5I-HxD"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSPreferencesGeneral" id="6Rf-Gg-Aeh"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="yeC-Nc-fOE" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="11s-1S-rmV"/>
+                <constraint firstItem="73H-Zv-m23" firstAttribute="top" secondItem="vrj-4n-fC4" secondAttribute="bottom" constant="24" id="Jag-Io-uuj"/>
+                <constraint firstItem="Wr3-5O-vGt" firstAttribute="top" secondItem="73H-Zv-m23" secondAttribute="bottom" constant="44" id="Swd-7X-5Ap"/>
+                <constraint firstItem="73H-Zv-m23" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="lsv-Fv-Wxi"/>
+                <constraint firstItem="yeC-Nc-fOE" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="16" id="myk-ID-Dhs"/>
+                <constraint firstItem="Wr3-5O-vGt" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="oSy-rY-glP"/>
+                <constraint firstItem="vrj-4n-fC4" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="veQ-ez-2ds"/>
+                <constraint firstItem="vrj-4n-fC4" firstAttribute="top" secondItem="yeC-Nc-fOE" secondAttribute="bottom" constant="24" id="z4i-PE-9dm"/>
+            </constraints>
+            <connections>
+                <outlet property="artistAlbumField" destination="73H-Zv-m23" id="S2G-AB-tOo"/>
+                <outlet property="artworkImageView" destination="yeC-Nc-fOE" id="1LS-1W-JKr"/>
+                <outlet property="musicTitleField" destination="vrj-4n-fC4" id="1dq-i4-MHR"/>
+            </connections>
+            <point key="canvasLocation" x="134.5" y="215.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+    </resources>
+</document>
